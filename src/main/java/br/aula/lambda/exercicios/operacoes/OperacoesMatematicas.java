@@ -13,7 +13,7 @@ public class OperacoesMatematicas {
         double num2 = scanner.nextDouble();
 
         // Operações utilizando expressões lambda
-        Operacao soma = (a, b) -> a + b;
+        Operacao soma = ( a,  b) ->  a + b ;
         Operacao subtracao = (a, b) -> a - b;
         Operacao multiplicacao = (a, b) -> a * b;
         Operacao divisao = (a, b) -> {

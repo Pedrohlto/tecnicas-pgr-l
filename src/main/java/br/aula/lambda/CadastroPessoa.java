@@ -7,6 +7,8 @@ public class CadastroPessoa {
 
     private List<Pessoa> pessoas = new ArrayList<>();
 
+
+
     public void adicionarPessoa(Pessoa pessoa) {
         this.pessoas.add(pessoa);
     }
