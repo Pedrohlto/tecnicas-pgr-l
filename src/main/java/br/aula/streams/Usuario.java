@@ -1,6 +1,7 @@
 package br.aula.streams;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class Usuario {
 
@@ -18,6 +19,8 @@ public class Usuario {
     }
 
     public Usuario(String nome){
+        Random random = new Random();
+        this.id =random.nextInt();
         this.nome = nome;
     }
 

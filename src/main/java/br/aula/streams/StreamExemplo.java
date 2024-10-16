@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamExemplo {
@@ -12,16 +13,17 @@ public class StreamExemplo {
         Path arquivo = Path.of("nomes2.txt");
         List<String> strings = Files.readAllLines(arquivo);
         Stream<String> stream = strings.stream();
-//
-//        stream.filter(nome -> {
-//                    return nome.contains("a");
-//                })
-//                .filter(nome -> {
-//                    return nome.startsWith("P");
-//                })
-//                .map(nome -> new Usuario((nome)))
-//                .collect(Collectors.toMap(usuario -> usuario.getId(), usuario -> usuario.getNome()))
 
+        var map = stream.filter(nome -> {
+                    return nome.contains("a");
+                })
+                .filter(nome -> {
+                    return nome.startsWith("P");
+                })
+                .map(nome -> new Usuario((nome)))
+                .collect(Collectors.toMap(usuario -> usuario.getId(), usuario -> usuario.getNome()));
+
+        System.out.println("");
 
 //        Stream<String> p = stream.filter(nome -> nome.contains("p"));
 //
