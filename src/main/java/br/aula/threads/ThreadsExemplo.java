@@ -43,6 +43,7 @@ public class ThreadsExemplo {
         thread4.start();
         thread5.start();
 
+        /** Código antigo e mais lento **/
         /*List<String> linhas = leituraArquivo("nomes2.txt");
         linhas.forEach(linha -> System.out.println(linha));
 
@@ -56,13 +57,13 @@ public class ThreadsExemplo {
         linhas4.forEach(linha -> System.out.println(linha));
 
         List<String> linhas5 = leituraArquivo("nomes2.txt");
-        linhas5.forEach(linha -> System.out.println(linha));*/
+        linhas5.forEach(linha -> System.out.println(linha));
 
-        Thread.sleep(2000);
+        /*Thread.sleep(2000);*/
+        Thread.sleep(1500);
+
         var fim = System.currentTimeMillis();
-
-        System.out.println("Tempo " + (fim - l)/1000 );
-
+        System.out.println("Tempo " + (fim - l)/1000 + " Segundos");
     }
 
     public static List<String> leituraArquivo(String nomeArquivo) {
